@@ -1,0 +1,14 @@
+{
+  "name": "nodeoracle",
+  "version": "1.0.0",
+  "description": "Test node app connecting to Oracle",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "J. Klein",
+  "license": "ISC",
+  "dependencies": {
+    "oracledb": "^4.0.1"
+  }
+}
