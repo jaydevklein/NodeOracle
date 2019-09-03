@@ -1,8 +1,9 @@
 const oracledb = require('oracledb');
+const fs = require('fs');
 
 oracledb.outFormat = oracledb.OUT_FORMAT_OBJECT;
 
-const mypw = '...'
+const mypw = '...';
 
 async function run() {
 
@@ -22,6 +23,10 @@ async function run() {
     );
     console.log(result.rows);
     console.log(`Number of rows retrieved ${result.rows.length}`);
+    fs.writeFile('NodeOracleOutput.json', JSON.stringify(result), (err) => {
+      if (err) throw err;
+      console.log('The file has been saved!');
+    });
 
   } catch (err) {
     console.error(err);
